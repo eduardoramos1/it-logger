@@ -1,0 +1,42 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Mudou disco rigido na oficina 005",
+      "attention": false,
+      "date": "11-11-2019",
+      "tech": "Eduardo Ramos"
+    },
+    {
+      "id": 2,
+      "message": "Oficina 007 não posta",
+      "attention": true,
+      "date": "11-11-2019",
+      "tech": "Zé Doe"
+    },
+    {
+      "id": 3,
+      "message": "Mudou memoria na oficina 050",
+      "attention": false,
+      "date": "11-11-2019",
+      "tech": "Wilson Wilsooon"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "Eduardo",
+      "lastName": "Ramos"
+    },
+    {
+      "id": 2,
+      "firstName": "Zé",
+      "lastName": "Doe"
+    },
+    {
+      "id": 3,
+      "firstName": "Wilson",
+      "lastName": "Wilsooon"
+    }
+  ]
+}
