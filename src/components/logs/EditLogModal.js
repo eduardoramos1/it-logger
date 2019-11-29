@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import M from "materialize-css/dist/js/materialize.min.js";
 
-const AddLogModal = () => {
+const EditLogModal = () => {
 	const [message, setMessage] = useState("");
 	const [attention, setAttention] = useState(false);
 	// O técnico e setar qual tecnico
 	const [tech, setTech] = useState("");
-
-	useEffect(() => {
-		var elems = document.querySelectorAll(".fixed-action-btn");
-		M.FloatingActionButton.init(elems, {
-			direction: "left"
-		});
-	}, []);
 
 	const onSubmit = () => {
 		if (message === "" || tech === "") {
@@ -27,7 +20,7 @@ const AddLogModal = () => {
 	};
 
 	return (
-		<div id="add-log-modal" className="modal" style={modalStyle}>
+		<div id="edit-log-modal" className="modal" style={modalStyle}>
 			<div className="modal-content">
 				<h4>Log do Sistema</h4>
 				<div className="row">
@@ -96,4 +89,4 @@ const modalStyle = {
 	height: "75%"
 };
 
-export default AddLogModal;
+export default EditLogModal;
