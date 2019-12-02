@@ -1,8 +1,21 @@
 import React from "react";
 import Moment from "react-moment";
+
+import { connect } from "react-redux";
+import { deleteLog } from "./../../actions/logActions";
+
+import M from "materialize-css/dist/js/materialize.min.js";
+
 import PropTypes from "prop-types";
 
-const LogItem = ({ log }) => {
+const LogItem = ({ log, deleteLog }) => {
+	const onDelete = () => {
+		if (window.confirm("Tem certeza que deseja excluir?")) {
+			deleteLog(log.id);
+			M.toast({ html: "Log excluído " });
+		}
+	};
+
 	return (
 		<li className="collection-item">
 			<div>
@@ -20,7 +33,7 @@ const LogItem = ({ log }) => {
 					por <span className="black-text">{log.tech}</span> em{" "}
 					<Moment format="DD/MM/YYYY, hh:mm:ss">{log.date}</Moment>
 				</span>
-				<a href="#!" className="secondary-content">
+				<a href="#!" onClick={onDelete} className="secondary-content">
 					<i className="material-icons grey-text">delete</i>
 				</a>
 			</div>
@@ -29,7 +42,8 @@ const LogItem = ({ log }) => {
 };
 
 LogItem.propTypes = {
-	log: PropTypes.object.isRequired
+	log: PropTypes.object.isRequired,
+	deleteLog: PropTypes.func.isRequired
 };
 
-export default LogItem;
+export default connect(null, { deleteLog })(LogItem);

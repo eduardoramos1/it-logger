@@ -1,13 +1,5 @@
 {
-  "logs": [
-    {
-      "message": "Criado sistema para adicionar logs em localhost:5000",
-      "tech": "Eduardo Ramos",
-      "attention": false,
-      "date": "2019-12-02T20:50:29.563Z",
-      "id": 1
-    }
-  ],
+  "logs": [],
   "techs": [
     {
       "id": 1,
