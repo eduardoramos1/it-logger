@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -20,6 +20,7 @@ const SearchBar = ({ searchLogs }) => {
 							onChange={ev => searchLogs(text.current.value)}
 							onBlur={ev => (ev.target.style.color = "white")}
 							onFocus={ev => (ev.target.style.color = "#444")}
+							placeholder="Pesquisar logs..."
 						/>
 						<label className="label-icon" htmlFor="search">
 							<i className="material-icons">search</i>
