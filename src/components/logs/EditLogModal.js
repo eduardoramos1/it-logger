@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import TechSelectOption from "./../techs/TechSelectOption";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -34,10 +35,6 @@ const EditLogModal = ({ updateLog, current }) => {
 
 			updateLog(updatedLog);
 			M.toast({ html: "Log alterado !" });
-
-			// setMessage("");
-			// setTech("");
-			// setAttention(false);
 		}
 	};
 
@@ -67,9 +64,7 @@ const EditLogModal = ({ updateLog, current }) => {
 							<option value="" disabled>
 								Selecione um técnico
 							</option>
-							<option value="Zé Doe">Zé Doe</option>
-							<option value="Eduardo Ramos">Eduardo Ramos</option>
-							<option value="Wilson Wilsooon">Wilson Wilsooon</option>
+							<TechSelectOption />
 						</select>
 					</div>
 				</div>
